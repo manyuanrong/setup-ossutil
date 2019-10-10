@@ -12,3 +12,5 @@ jobs:
         access-key-id: ${{ secrets.ACCESS_KEY_ID }}
         access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
     - run: ossutil -h
+    - run: echo $GITHUB_SHA > output.txt
+    - run: ossutil cp output.txt oss://enok-code/ossutil.txt -f
