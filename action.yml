@@ -1,0 +1,23 @@
+# action.yml
+name: "Setup Ossutil"
+description: "Setup aliyun ossutil"
+branding:
+  icon: 'play'  
+  color: 'orange'
+inputs:
+  endpoint:
+    description: "填写Bucket所在地域的域名信息，可参考访问域名和数据中心。"
+    required: true
+  access-key-id:
+    description: "AccessKeyID"
+    required: true
+  access-key-secret:
+    description: "AccessKeySceret"
+    required: true
+  sts-token:
+    description: "非必配项，若采用STS临时授权方式访问OSS需要配置该项。stsToken生成方式参考临时访问凭证"
+    required: false
+    default: ""
+runs:
+  using: "node12"
+  main: "index.js"

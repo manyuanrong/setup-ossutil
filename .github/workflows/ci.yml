@@ -1,0 +1,14 @@
+name: Setup ossutil
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: manyuanrong/setup-ossutil@master
+      with:
+        endpoint: "oss-cn-hangzhou.aliyuncs.com"
+        access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+        access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
+    - run: ossutil -h
