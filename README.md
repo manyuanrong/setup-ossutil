@@ -11,7 +11,7 @@ See [action.yml](action.yml)
 ```yaml
 steps:
   - uses: actions/checkout@master
-  - uses: manyuanrong/setup-ossutil@v1.0
+  - uses: manyuanrong/setup-ossutil@v2.0
     with:
       endpoint: "oss.aliyuncs.com"
       access-key-id: "your_key_id"
