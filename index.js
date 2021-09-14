@@ -4,7 +4,7 @@ const toolCache = require("@actions/tool-cache");
 const path = require("path");
 const fs = require("fs");
 
-const url = "http://gosspublic.alicdn.com/ossutil/1.6.7/ossutil64";
+const url = "http://gosspublic.alicdn.com/ossutil/1.7.7/ossutil64";
 
 async function main() {
   const ENDPOINT = core.getInput("endpoint");
@@ -12,7 +12,7 @@ async function main() {
   const ACCESS_KEY_SECRET = core.getInput("access-key-secret");
   const STS_TOKEN = core.getInput("sts-token");
 
-  let toolPath = toolCache.find("ossutil", "1.6.7");
+  let toolPath = toolCache.find("ossutil", "1.7.7");
 
   if (!toolPath) {
     core.info(`downloading from ${url}`);
